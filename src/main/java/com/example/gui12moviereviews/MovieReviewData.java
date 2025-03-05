@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 
-@JsonIgnoreProperties(value = { "Year","Rated", "Released", "Runtime","Genre", "Director", "Writer", "Actors", "Language", "Country", "Awards", "Type", "DVD", "BoxOffice", "Production", "Website", "Response", "imdbVotes" })
+@JsonIgnoreProperties(value = { "Year","Rated", "Runtime","Genre", "Director", "Writer", "Actors", "Language", "Country", "Type", "DVD", "Production", "Website", "Response", "imdbVotes" })
 public class MovieReviewData {
 
     @JsonProperty("Title")
@@ -28,6 +28,15 @@ public class MovieReviewData {
 
     @JsonProperty("Poster")
     String posterURL;
+
+    @JsonProperty("Awards")
+    String movieAwards;
+
+    @JsonProperty("BoxOffice")
+    String movieBoxOffice;
+
+    @JsonProperty("Released")
+    String movieReleaseDate;
 
     static ArrayList<MovieReviewData> currentReviews = new ArrayList<>();
 
@@ -100,6 +109,30 @@ public class MovieReviewData {
 
     public void setPosterURL(String posterURL) {
         this.posterURL = posterURL;
+    }
+
+    public String getMovieAwards() {
+        return movieAwards;
+    }
+
+    public void setMovieAwards(String movieAwards) {
+        this.movieAwards = movieAwards;
+    }
+
+    public String getMovieBoxOffice() {
+        return movieBoxOffice;
+    }
+
+    public void setMovieBoxOffice(String movieBoxOffice) {
+        this.movieBoxOffice = movieBoxOffice;
+    }
+
+    public String getMovieReleaseDate() {
+        return movieReleaseDate;
+    }
+
+    public void setMovieReleaseDate(String movieReleaseDate) {
+        this.movieReleaseDate = movieReleaseDate;
     }
 
     public String toString() {

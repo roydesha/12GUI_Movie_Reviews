@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 public class ReviewController {
     public TextArea questionBox;
+    public TextArea plotArea;
     public RadioButton buttonOne;
     public RadioButton buttonTwo;
     public RadioButton buttonThree;
@@ -31,7 +32,7 @@ public class ReviewController {
     public Button nextButton;
     public Button againButton;
     public TextField movieTitleField;
-    public TextField plotField;
+   // public TextField plotField;
     public TextField awardField;
     public TextField revenueField;
     public TextField dateField;
@@ -78,7 +79,7 @@ public class ReviewController {
         buttonNine.setToggleGroup(ratingGroup);
         buttonTen.setToggleGroup(ratingGroup);
 
-        plotField.setVisible(false);
+        plotArea.setVisible(false);
         awardField.setVisible(false);
         revenueField.setVisible(false);
         dateField.setVisible(false);
@@ -89,19 +90,22 @@ public class ReviewController {
             Object choice  = hintBox.getValue();
             System.out.println(choice);
             if (choice.toString().equalsIgnoreCase("Plot")) {
-                plotField.setVisible(true);
-                plotField.setText(currentReviewToGuess.getMoviePlot());
+                plotArea.setVisible(true);
+                plotArea.setText(currentReviewToGuess.getMoviePlot());
                 //change to a text area
 
             } else if (choice.toString().equalsIgnoreCase("Release Date")) {
-                //dateField.setText(currentReviewToGuess.getR());
-                //have to make the getters and setters
+                dateField.setVisible(true);
+                dateField.setText(currentReviewToGuess.getMovieReleaseDate());
+
 
             } else if (choice.toString().equalsIgnoreCase("Awards")) {
-                //awardField.setText(currentReviewToGuess.get());
+                awardField.setText(currentReviewToGuess.getMovieAwards());
+                awardField.setVisible(true);
 
             } else {
-                //revenueField.setText(currentReviewToGuess.get());
+                revenueField.setText(currentReviewToGuess.getMovieBoxOffice());
+                revenueField.setVisible(true);
             }
 
         });
@@ -158,12 +162,17 @@ public class ReviewController {
             RadioButton selectedButton = (RadioButton) ratingGroup.getSelectedToggle();
             selectedButton.setSelected(false);
             feedbackLabel.setVisible(false);
+            plotArea.setVisible(false);
+            revenueField.setVisible(false);
+            dateField.setVisible(false);
+            awardField.setVisible(false);
 
             MovieReviewData.currentReviews.remove(currentReviewToGuess);
             currentMovieNum = (int) (Math.random() * MovieReviewData.currentReviews.size());
             currentReviewToGuess = MovieReviewData.currentReviews.get(currentMovieNum);
 
             displayMovie(currentReviewToGuess);
+
 
         }
 

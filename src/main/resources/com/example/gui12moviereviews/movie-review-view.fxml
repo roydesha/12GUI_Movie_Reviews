@@ -12,8 +12,8 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightyellow;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui12moviereviews.ReviewController">
    <children>
       <TextField fx:id="movieTitleField" alignment="CENTER" editable="false" layoutX="167.0" layoutY="27.0" prefHeight="25.0" prefWidth="260.0" />
-      <ImageView fx:id="posterView" fitHeight="190.0" fitWidth="179.0" layoutX="203.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
-      <TextArea fx:id="questionBox" layoutX="105.0" layoutY="271.0" prefHeight="10.0" prefWidth="410.0" />
+      <ImageView fx:id="posterView" fitHeight="190.0" fitWidth="179.0" layoutX="187.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true" />
+      <TextArea fx:id="questionBox" layoutX="105.0" layoutY="271.0" prefHeight="10.0" prefWidth="410.0" wrapText="true" />
       <RadioButton fx:id="buttonOne" layoutX="43.0" layoutY="325.0" mnemonicParsing="false" onAction="#radioRating" text="1" />
       <RadioButton fx:id="buttonTwo" layoutX="98.0" layoutY="325.0" mnemonicParsing="false" onAction="#radioRating" text="2" />
       <RadioButton fx:id="buttonThree" layoutX="155.0" layoutY="325.0" mnemonicParsing="false" onAction="#radioRating" text="3" />
@@ -24,14 +24,14 @@
       <RadioButton fx:id="buttonEight" layoutX="417.0" layoutY="325.0" mnemonicParsing="false" onAction="#radioRating" text="8" />
       <RadioButton fx:id="buttonNine" layoutX="470.0" layoutY="325.0" mnemonicParsing="false" onAction="#radioRating" text="9" />
       <RadioButton fx:id="buttonTen" layoutX="515.0" layoutY="325.0" mnemonicParsing="false" onAction="#radioRating" text="10" />
-      <TextField fx:id="plotField" editable="false" layoutX="435.0" layoutY="51.0" />
-      <TextField fx:id="awardField" editable="false" layoutX="435.0" layoutY="96.0" />
-      <TextField fx:id="revenueField" editable="false" layoutX="435.0" layoutY="142.0" />
-      <TextField fx:id="dateField" editable="false" layoutX="435.0" layoutY="188.0" />
+      <TextField fx:id="awardField" editable="false" layoutX="396.0" layoutY="130.0" prefHeight="37.0" prefWidth="200.0" />
+      <TextField fx:id="revenueField" editable="false" layoutX="435.0" layoutY="188.0" />
+      <TextField fx:id="dateField" editable="false" layoutX="435.0" layoutY="237.0" />
       <ComboBox fx:id="hintBox" layoutX="449.0" layoutY="2.0" prefWidth="150.0" promptText="Hint?" />
       <Label fx:id="feedbackLabel" layoutX="211.0" layoutY="361.0" prefHeight="17.0" prefWidth="172.0" />
       <Button fx:id="nextButton" layoutX="488.0" layoutY="357.0" mnemonicParsing="false" onAction="#newQuestion" text="next question" />
       <Label fx:id="scoreLabel" layoutX="24.0" layoutY="55.0" prefHeight="17.0" prefWidth="105.0" text="Score: " textFill="#b52121" />
       <Button fx:id="againButton" layoutX="496.0" layoutY="357.0" mnemonicParsing="false" onAction="#playAgainView" text="Play Again" />
+      <TextArea fx:id="plotArea" layoutX="383.0" layoutY="64.0" prefHeight="48.0" prefWidth="211.0" wrapText="true" />
    </children>
 </Pane>
