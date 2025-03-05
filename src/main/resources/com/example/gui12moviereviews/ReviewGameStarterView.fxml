@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightyellow;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui12moviereviews.StarterController">
+   <children>
+      <Label alignment="CENTER" layoutX="136.0" layoutY="120.0" prefHeight="24.0" prefWidth="329.0" text="~ Guess That Rating ~" textFill="#bf1b1b">
+         <font>
+            <Font name="Chalkboard" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="mermaidButton" layoutX="204.0" layoutY="263.0" mnemonicParsing="false" onAction="#mermaidNextView" text="Mermaid" textFill="#b21d1d" />
+      <Button fx:id="doctorButton" layoutX="321.0" layoutY="263.0" mnemonicParsing="false" onAction="#doctorNextView" text="Doctor" textFill="#b21d1d" />
+      <Button fx:id="kingButton" layoutX="279.0" layoutY="211.0" mnemonicParsing="false" onAction="#kingNextView" text="King" textFill="#b21d1d" />
+      <Button fx:id="blackButton" layoutX="178.0" layoutY="211.0" mnemonicParsing="false" onAction="#blackNextView" text="Black" textFill="#b21d1d" />
+      <Button fx:id="killerButton" layoutX="368.0" layoutY="211.0" mnemonicParsing="false" onAction="#killerNextView" text="Killer" textFill="#b21d1d" />
+      <Label layoutX="265.0" layoutY="159.0" text="pick a button" textFill="#c3649d" />
+   </children>
+</Pane>
